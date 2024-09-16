@@ -48,7 +48,8 @@ div.about
 div.section_projects{
     background: white;
     position: relative;
-    height: fit-content;
+    height: 40em;
+
 }
 .container {
     position: relative;
@@ -105,6 +106,7 @@ div.section_projects{
     border-radius: 25px;
     height: 400px;
     transition: all 0.3s;
+    margin-top: 8em;
  } 
 .card-slider_item{
     display: flex; /*sap xep cac phan tu con theo chieu ngang*/
@@ -222,8 +224,8 @@ div.section_projects{
 }
 /* nut nho trong thanh keo */
 .card-slider_pagination .swiper-pagination-bullet{
-    width: 11px;
-    height: 11px;
+    width: 13px;
+    height: 13px;
     display: block;
     border-radius:10px;
     background: #f9578d;
@@ -232,8 +234,83 @@ div.section_projects{
 }
 .card-slider_pagination .swiper-pagination-bullet-active{
     opacity: 1;
-    background: rgb(115, 17, 137);
-    height: 50px;
+    background: rgb(241, 18, 207);
+    height: 30px;
     box-shadow: var(--box-shadow);
     margin-left: 10em;
 } 
+/* footer */
+ .icon-area{
+    display: flex;
+}
+.icon-area .icon a{
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    font-size: 40px;
+    margin: 0 15px;
+    display: block;
+    line-height: 80px;
+    position: relative;
+    border: 6px solid #fff;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 15px 15px 40px rgba(0,0,0,0.15);
+    box-sizing: border-box; /* Tính viền vào kích thước */
+    display: flex; /* Đảm bảo căn giữa icon */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    text-decoration: none;
+}
+.icon-area .icon a i{
+    position: relative;
+    color: #262626;
+    transition: 1s;
+}
+.icon-area .icon a:hover i{
+    transform: rotateY(360deg);
+    color: #fff;
+}
+/* .icon-area .icon a::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,#d506ce,#a605b4);
+    left: 0;
+    top: 100%;
+    transition: 1.5s;
+} */
+.icon-area .icon:nth-child(1) a::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,#588ce5,#365ad1);
+    left: 0;
+    top: 100%;
+    transition: 1.5s;
+}
+.icon-area .icon:nth-child(2) a::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,#e06868,#f72645);
+    left: 0;
+    top: 100%;
+    transition: 1.5s;
+}
+.icon-area .icon:nth-child(3) a::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,#322806,#111201);
+    left: 0;
+    top: 100%;
+    transition: 1.5s;
+}
+.icon-area .icon a:hover::before{
+    top:0;
+}  
