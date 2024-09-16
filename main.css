@@ -1,8 +1,8 @@
 @import url('https://fonts.google.com/specimen/Montserrat');
-*{
+/* *{
     margin:0;
     padding:0;
-}
+} */
 body {
     animation: fadeIn 2s ease-in; /* Hiệu ứng kéo dài 2 giây */
     overflow-x: hidden;
@@ -13,7 +13,7 @@ body {
 }
 div.container-fluid{
     position: relative;
-    background: black; 
+    background: rgb(83, 4, 122); 
     border-bottom: 1px solid lightgrey;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -46,44 +46,26 @@ div.about
     height: 40em;
 }
 div.section_projects{
-    background: black;
+    background: white;
     position: relative;
     height: fit-content;
-}
-.hidden {
-    display: none;
-}
-/* dieu chinh project */
-html {
-    scroll-behavior: smooth; 
-}
-
-.scrollable-container {
-    width: 100%; 
-    height: 100vh; /*chieu cao = man hinh*/
-    overflow: hidden; /*an thanh cuon*/
-    overflow-y: scroll; /*cuon doc*/
-    scroll-snap-type: y mandatory; /* Bật tính năng scroll-snap */
-    scroll-behavior: smooth;
-}
-.item {
-    height: 100vh; 
-    scroll-snap-align: start; 
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    justify-content: center; 
-    background: black; 
-    margin-bottom: 20px;
-    color: white; 
-}
-h1.text-center{
-    color:white;
-    font-size: 10em;
 }
 .container {
     position: relative;
     display: inline-block;
+}
+#hinhtrungdoan{
+    margin-top: 1em;
+    margin-left: 8em;
+}
+/* chinh hieu ung load trang tu tu */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 /*button click vao website*/
 #submit{
@@ -97,41 +79,161 @@ h1.text-center{
     border-radius: 12px;
     font-weight: bold;
     height: fit-content;
+    transition: all 0.3s ease;
 }
 #submit:hover
 {
     background-color: transparent;
     color: pink;
 }
-#hinhtrungdoan{
+ :root{
+    --bg-color: linear-gradient(147deg,black,#642b73 74%);
+    --box-shadow:0px 14px 80px rgba(252,56,203,0.227);
+}
+*{
+    box-sizing:border-box;
+}
+ .card-slider{
+    width: 95%;
+    position: relative;
+    max-width: 800px;
+    margin: auto; 
+    /* căn giữa theo chiều ngang */
+    background: var(--bg-color);
+    box-shadow: var(--box-shadow);
+    padding: 25px; /*đặt khoảng cách bên trong card*/
+    border-radius: 25px;
+    height: 400px;
+    transition: all 0.3s;
+ } 
+.card-slider_item{
+    display: flex; /*sap xep cac phan tu con theo chieu ngang*/
+    align-items: center; /*can giua các phan tu con theo truc doc*/
+}
+.card-slider_item.swiper-slider-active .card-slider_img img{
+    opacity: 1;
+    transition-delay: 0.3s;
+}
+.card-slider_item.swiper-slider-active .card-slider_content > *{
+    opacity: 1;
+    transform: none;
+}
+.card-slider_item .swiper-slider-active .card-slider_content > *:nth-child(1){
+    transition-delay: 0.3s;
+}
+.card-slider_item .swiper-slider-active .card-slider_content > *:nth-child(2){
+    transition-delay: 0.4s;
+}
+.card-slider_item .swiper-slider-active .card-slider_content > *:nth-child(3){
+    transition-delay: 0.5s;
+}
+.card-slider_item .swiper-slider-active .card-slider_content > *:nth-child(4){
+    transition-delay: 0.6s;
+}
+.card-slider_item .swiper-slider-active .card-slider_content > *:nth-child(5){
+    transition-delay: 0.7s;
+} 
+/* cấu trúc hình ảnh của card */
+.card-slider_img{
+    width: 600px; /*chiều rộng của ảnh*/
+    flex-shrink: 0; /*ko cho phép hinh anh thu nho khi ko du khong gian*/
+    height: 300px; 
+    background-image: var(--bg-color); 
+    box-shadow: var(--box-shadow);
+    border-radius: 20px;
+    transform: translateX(80px); /*dich chuyen hình anh sang trái*/
+    overflow: hidden; 
+}
+/* hiệu ứng cho hình ảnh */
+.card-slider_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    opacity: 1;
+    border-radius: 20px;
+    transition: all 0.3s;
+} */
+/* nội dung của card */
+.card-slider_content{
+    padding-right: 30px;
+} 
+/* lấy tất cả nội dung trong phần content */
+.card-slider_content > *{
+    opacity: 0; /*ban đầu nội dung ko hiển thị*/
+    transform: translateY(25px); /*dịch chuyển xuống dưới 25px*/
+    transition: all 0.4s;
+}
+/* nội dung trong content */
+.swiper-slide-active .card-slider_content > * {
+    opacity: 1; 
+    transform: translateY(0); /* Trở về vị trí ban đầu */
+    transition-delay: 0.2s; /* Thêm chút trễ để nội dung hiện dần */
     margin-top: 1em;
-    margin-left: 8em;
 }
-#headingpr {
+ /* tiêu đề của card  */
+.card-slider_title{
+    /* z-index: 10; */
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 20px;
+    margin-left: 13em ;
+}
+.card-slider_text{
+    color: aqua;
+    margin-bottom: 30px;
+    line-height: 1.5em;
+} 
+/* nút go to my website */
+.card-slider_button{
+    display: inline-flex;
+    background-image: var(--bg-color);
+    padding: 15px 35px;
+    border-radius: 50px;
+    color: white;
+    box-shadow: var(--box-shadow);
+    text-decoration: none;
+    font-weight: 500;
+    justify-content: center;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-left: 17em ;
+} 
+ .card-slider .swiper-container-horizontal > .swiper-pagination-bullets,.card-slider .swiper-pagination-custom,.card-slider .swiper-pagination-fraction{
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+} 
+/*phân trang của slider*/
+ .card-slider_pagination{
+    position: absolute;
+    z-index: 21;
+    right: 20px;
+    width: 11px !important;
+    text-align: center;
+    left: auto !important;
+    top: 50% !important;
+    bottom: auto !important;
+    transform: translateY(-50%);
+}
+.card-slider_pagination.swiper-pagination-bullets .swiper-pagination-bullet{
+    margin: 8px 0;
+}
+/* nut nho trong thanh keo */
+.card-slider_pagination .swiper-pagination-bullet{
+    width: 11px;
+    height: 11px;
+    display: block;
+    border-radius:10px;
+    background: #f9578d;
+    opacity: 0.5;
+    transition: all 0.3s;
+}
+.card-slider_pagination .swiper-pagination-bullet-active{
     opacity: 1;
-    transition: opacity 3s ease;
-}
-/* hieu ung doi so tu tu */
-.fade-out {
-    opacity: 0;
-    transition: opacity 3s ease;
-}
-
-.fade-in {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 10s ease;
-}
-#gifAbout{
+    background: rgb(115, 17, 137);
     height: 50px;
-    width: 100px;
-}
-/* chinh hieu ung load trang tu tu */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
+    box-shadow: var(--box-shadow);
+    margin-left: 10em;
+} 
