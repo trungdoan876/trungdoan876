@@ -1,8 +1,4 @@
 @import url('https://fonts.google.com/specimen/Montserrat');
-/* *{
-    margin:0;
-    padding:0;
-} */
 body {
     animation: fadeIn 2s ease-in; /* Hiệu ứng kéo dài 2 giây */
     overflow-x: hidden;
@@ -18,21 +14,43 @@ div.container-fluid{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
+.container-fluid /*header cố định*/
+{
+    position: sticky !important;
+    top:0px;
+    z-index: 100000; /*độ ưu tiên của mấy cái layer*/
+}
+nav {
+    display: flex; /* Xếp các mục theo chiều ngang */
+    justify-content: center; /* Canh giữa các mục theo chiều ngang */
+    gap: 20px; /* Khoảng cách giữa các mục */
+}
+nav a{
+    color: white; /* Màu mặc định */
+    transition: color 0.3s ease; /* Hiệu ứng chuyển đổi màu */
+    text-decoration: none;
+    font-weight: 500;
+    transition: .3s;
+}
+nav a:hover, nav a:active {
+    color: yellow; /* Màu khi mục được kích hoạt */
+}
 .nav-link px-2{
     color: white; /* Thay thế bằng màu mong muốn */
     text-decoration: none; /* Loại bỏ gạch chân mặc định */
-}
+} 
 #h4{
     font-family: Garamond !important;
-    margin-top: 0.25em;
+    margin-top: 0.75em;
     margin-left: 2.5em;
     color: white;
-    font-size: 1.15em;
+    font-size: 1.2em;
 }
 #hinhmini{
     height: 35px;
     width: 35px;
     margin-right: auto;
+    margin-top: 0.75em;
 }
 #hinhSun
 {
@@ -48,8 +66,7 @@ div.about
 div.section_projects{
     background: white;
     position: relative;
-    height: 40em;
-
+    height: 100vh;
 }
 .container {
     position: relative;
@@ -87,7 +104,7 @@ div.section_projects{
     background-color: transparent;
     color: pink;
 }
- :root{
+:root{
     --bg-color: linear-gradient(147deg,black,#642b73 74%);
     --box-shadow:0px 14px 80px rgba(252,56,203,0.227);
 }
@@ -98,8 +115,7 @@ div.section_projects{
     width: 95%;
     position: relative;
     max-width: 800px;
-    margin: auto; 
-    /* căn giữa theo chiều ngang */
+    margin: auto; /* căn giữa theo chiều ngang */
     background: var(--bg-color);
     box-shadow: var(--box-shadow);
     padding: 25px; /*đặt khoảng cách bên trong card*/
@@ -108,9 +124,26 @@ div.section_projects{
     transition: all 0.3s;
     margin-top: 8em;
  } 
+ .swiper-slide {
+    display: flex !important;
+    height: 100%;
+    margin-right: 15px; /* Khoảng cách giữa các card */
+}
+.card-slider_wrp {
+    display: flex;              /* Đặt flex cho các phần tử con (slide) */
+    width: 100%;                /* Chiều rộng của vùng wrapper là 100% */
+}
 .card-slider_item{
     display: flex; /*sap xep cac phan tu con theo chieu ngang*/
     align-items: center; /*can giua các phan tu con theo truc doc*/
+    position: relative;
+    width: 300px !important;
+    height: 400px !important;
+    background: #fff;
+    transform-style:preserve-3d;
+    transform: perspective(1000px);
+    box-shadow: 10px 20px 40px rgba(0,0,0,0.25);
+    margin: 30px;
 }
 .card-slider_item.swiper-slider-active .card-slider_img img{
     opacity: 1;
@@ -135,31 +168,23 @@ div.section_projects{
 .card-slider_item .swiper-slider-active .card-slider_content > *:nth-child(5){
     transition-delay: 0.7s;
 } 
-/* cấu trúc hình ảnh của card */
-.card-slider_img{
-    width: 600px; /*chiều rộng của ảnh*/
-    flex-shrink: 0; /*ko cho phép hinh anh thu nho khi ko du khong gian*/
-    height: 300px; 
-    background-image: var(--bg-color); 
-    box-shadow: var(--box-shadow);
-    border-radius: 20px;
-    transform: translateX(80px); /*dich chuyen hình anh sang trái*/
-    overflow: hidden; 
-}
+.card-slider_item .swiper-slider-active .card-slider_content > *:nth-child(6){
+    transition-delay: 0.8s;
+} 
 /* hiệu ứng cho hình ảnh */
-.card-slider_img img {
+.card-slider_item .card-slider_img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover !important;
     display: block;
     opacity: 1;
-    border-radius: 20px;
-    transition: all 0.3s;
-} */
-/* nội dung của card */
-.card-slider_content{
-    padding-right: 30px;
-} 
+    position: absolute;
+    z-index: 1;
+    transform-origin: left;
+    transform-style: preserve-3d;
+    background:#e21212;
+    transition:all  1.5s;
+}
 /* lấy tất cả nội dung trong phần content */
 .card-slider_content > *{
     opacity: 0; /*ban đầu nội dung ko hiển thị*/
@@ -170,37 +195,23 @@ div.section_projects{
 .swiper-slide-active .card-slider_content > * {
     opacity: 1; 
     transform: translateY(0); /* Trở về vị trí ban đầu */
-    transition-delay: 0.2s; /* Thêm chút trễ để nội dung hiện dần */
+    transition-delay: 0.4s; /*Thêm chút trễ để nội dung hiện dần  */
     margin-top: 1em;
 }
- /* tiêu đề của card  */
-.card-slider_title{
-    /* z-index: 10; */
-    font-size: 24px;
-    font-weight: 700;
-    color: white;
-    margin-bottom: 20px;
-    margin-left: 13em ;
-}
-.card-slider_text{
-    color: aqua;
-    margin-bottom: 30px;
-    line-height: 1.5em;
-} 
 /* nút go to my website */
 .card-slider_button{
-    display: inline-flex;
+    /* display: inline-flex; */
     background-image: var(--bg-color);
     padding: 15px 35px;
     border-radius: 50px;
     color: white;
     box-shadow: var(--box-shadow);
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
     justify-content: center;
     text-align: center;
     letter-spacing: 1px;
-    margin-left: 17em ;
+    font-size: medium;
 } 
  .card-slider .swiper-container-horizontal > .swiper-pagination-bullets,.card-slider .swiper-pagination-custom,.card-slider .swiper-pagination-fraction{
     bottom: 10px;
@@ -239,8 +250,49 @@ div.section_projects{
     box-shadow: var(--box-shadow);
     margin-left: 10em;
 } 
+.card-slider:not(:hover) {
+    transform: perspective(1000px); /* không hover, thẻ trở về vị trí cũ */
+    transition: 1s; /*trở về vị trí cũ một cách từ từ*/
+}
+.card-slider_item:hover .card-slider_img{
+    transform: rotateY(-180deg) !important;
+}
+.card-slider_item .card-slider_img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover !important;
+    transform-style: preserve-3d;
+    transition: 1s;
+}
+.card-slider_content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: black;
+    gap: 1em; /* Điều chỉnh khoảng cách giữa các phần tử */
+}
+.card-slider_title{
+    font-size: 24px;
+    font-weight: 700;
+}
+.card-slider_des{
+    margin-left: 1em;
+    text-align: justify;
+    hyphens: auto;
+    margin-right: 1em;
+}
 /* footer */
  .icon-area{
+    margin-top: 10em;
     display: flex;
 }
 .icon-area .icon a{

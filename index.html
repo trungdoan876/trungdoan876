@@ -22,15 +22,21 @@
                 <li><img src="images/sunflower.png" id = "hinhmini"></li>
              </ul>
         </div>
-        <div class = "col-8">
-            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-                <li><a href="#about" class="nav-link px-2 link-secondary" style="color: white;">ABOUT ME</a></li>
-                <li><a href="#projects" class="nav-link px-2" style="color: white;">PROJECTS</a></li>
-                <li><a href="#contact" class="nav-link px-2" style="color: white;">CONTACT</a></li>
-            </ul>
-        </div>
-    </div>
+    <div class = "col-8">
+      <!-- <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0" style="height: 3.5em;">
+          <li><a href="#about" class="nav-link px-2 active" style="color: white; margin-top: 8px;">ABOUT ME</a></li>
+          <li><a href="#projects" class="nav-link px-2" style="color: white; margin-top: 8px;">PROJECTS</a></li>
+          <li><a href="#contact" class="nav-link px-2" style="color: white; margin-top: 8px;">CONTACT</a></li>
+      </ul> -->
+      <nav style="height: 4em;">
+        <a href="#about" class="active" style="margin-top: 15px;">ABOUT ME</a>
+        <a href="#projects" class="active" style="margin-top: 15px; ">PROJECTS</a>
+        <a href="#contact" class="active" style="margin-top: 15px; ">CONTACT</a>
+      </nav>
+  </div>
 </div>
+</div>
+
 <!-- aboutme -->
 <div id ="about" class = "about">
     <div class = "container text-center" >
@@ -56,75 +62,115 @@
     </div>
 </div>
 <!-- projects -->
-<div id = "projects" class="section_projects">
-  <div class = "card-slider">
-      <div class = "card-slider_wrp swiper-wrapper">
-        <!-- từ đây 1 là card -->
-        <div class = "card-slider_item swiper-slide">
-          <div class = "card-slider_img">
-            <img src="images/1emaillist.png" alt="">
+<div id ="projects" class = "projects">
+<div class = "card-slider">
+  <div class = "card-slider_wrp swiper-wrapper">
+    <div class="swiper-slide">
+      <div class = "card-slider_item">
+        <div class = "card-slider_img">
+          <img src="images/01.png" alt="">
+        </div>
+        <div class = "card-slider_content">
+          <div class = "card-slider_title">
+              Ex1. Email List
           </div>
-          <div class = "card-slider_content">
-            <div class = "card-slider_title">
-                1. EmailList
-            </div>
-            <!-- <div class = "card-slider_text">
-              cái này nó cứ bị lỗi gì ý rất là khó chịu vô cùng tận
-            </div> -->
-            <div>
-              <a href="https://emailist.azurewebsites.net/" class="card-slider_button" target="_blank">Go to my website.</a>
-            </div>
+          <div class="card-slider_des">
+            This is the first exercise where I learned how to use Netbeans and Tomcat to create a web application.
+          </div>
+          <div>
+            <a href="https://emailist.azurewebsites.net/" class="card-slider_button" target="_blank">Explore my website.</a>
           </div>
         </div>
-        <!-- hết 1 card -->
-        <div class = "card-slider_item swiper-slide">
-          <div class = "card-slider_img">
-            <img src="images/2survey.png" alt="">
+      </div>
+          <!-- hết 1 card -->
+      <div class = "card-slider_item">
+        <div class = "card-slider_img">
+          <img src="images/survey2.png" alt="">
+        </div>
+        <div class = "card-slider_content">
+          <div class = "card-slider_title">
+              Ex2. Survey
           </div>
-          <div class = "card-slider_content">
-            <div class = "card-slider_title">
-                2. Survey
-            </div>
-            <!-- <div class = "card-slider_text">
-              cái này nó cứ bị lỗi gì ý rất là khó chịu vô cùng tận
-            </div> -->
-            <div>
-              <a href="https://baitap.azurewebsites.net/" class="card-slider_button" target="_blank">Go to my website.</a>
-            </div>
+          <div class="card-slider_des">
+            In this exercise I create a web application which is a survey. In this lesson I learn about HTML, CSS and understand how the User class works.
+          </div>
+          <div>
+            <a href="https://baitap.azurewebsites.net/" class="card-slider_button" target="_blank">Explore my website.</a>
           </div>
         </div>
-        <!-- card 3 -->
-        <div class = "card-slider_item swiper-slide">
-          <div class = "card-slider_img">
-            <img src="images/1emaillist.png" alt="">
-          </div>
-          <div class = "card-slider_content">
-            <div class = "card-slider_title">
-                3. BT 5.1
-            </div>
-            <div>
-              <a href="https://baitap51.azurewebsites.net/" class="card-slider_button" target="_blank">Go to my website.</a>
-            </div>
-          </div>
-        </div>
-        <div class = "card-slider_item swiper-slide">
-          <div class = "card-slider_img">
-            <img src="images/1emaillist.png" alt="">
-          </div>
-          <div class = "card-slider_content">
-            <div class = "card-slider_title">
-                4. BT 5.2
-            </div>
-            <div>
-              <a href="https://bt52rd.onrender.com/" class="card-slider_button" target="_blank">Go to my website.</a>
-            </div>
-          </div>
-          </div>
-        </div>
+      </div>
     </div>
-    <div class = "card-slider_pagination"></div>
-  </div>
-    <!-- <div class = "card-slider_pagination"></div> -->
+        <div class="swiper-slide">
+          <!-- card 3 -->
+          <div class = "card-slider_item ">
+            <div class = "card-slider_img">
+              <img src="images/01.png" alt="">
+            </div>
+            <div class = "card-slider_content">
+              <div class = "card-slider_title">
+                  Ex3. 5.1
+              </div>
+              <div class="card-slider_des">
+                In this exercise, you will modify a servlet in an email application to handle HTTP requests. I learned more about how the POST/GET methods work.
+              </div>
+              <div>
+                <a href="https://baitap51.azurewebsites.net/" class="card-slider_button" target="_blank">Explore my website.</a>
+              </div>
+            </div>
+          </div>
+          <div class = "card-slider_item ">
+            <div class = "card-slider_img">
+              <img src="images/52.png" alt="">
+            </div>
+            <div class = "card-slider_content">
+              <div class = "card-slider_title">
+                  Ex4. 5.2
+              </div>
+              <div class="card-slider_des">
+                In this exercise, I will create a new servlet - TestServlet mapped to the URL /test and see how the GET method works. Finally, learn how to use the @WebServlet annotation instead of mapping through the web.xml file.
+              </div>
+              <div>
+                <a href="https://bt52rd.onrender.com/" class="card-slider_button" target="_blank">Explore my website.</a>
+              </div>
+            </div>
+            </div>
+          </div>
+      <div class="swiper-slide">
+        <div class = "card-slider_item">
+          <div class = "card-slider_img">
+            <img src="images/01.png" alt="">
+          </div>
+          <div class = "card-slider_content">
+            <div class = "card-slider_title">
+                Ex5. 6.1
+            </div>
+            <div class="card-slider_des">
+              In this exercise I learn how to use JSP tags to display copyright notices and use files like footer.jsp and header.html to avoid code duplication at compile-time and runtime.            </div>
+            <div>
+              <a href="https://bt61.azurewebsites.net/" class="card-slider_button" target="_blank">Explore my website.</a>
+            </div>
+          </div>
+        </div>
+        <div class = "card-slider_item">
+          <div class = "card-slider_img">
+            <img src="images/survey2.png" alt="">
+          </div>
+          <div class = "card-slider_content">
+            <div class = "card-slider_title">
+              Ex5. 6.2
+            </div>
+            <div class="card-slider_des">
+              In this exercise I learn how to create a new JSP and edit that JSP file with JSTL tags.
+            </div>
+            <div>
+              <a href="" class="card-slider_button" target="_blank">Explore my website.</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class = "card-slider_pagination"></div>
+    </div>
+</div>
 </div>
 <!-- footer -->
   <footer id="contact" class="py-3 my-4">
