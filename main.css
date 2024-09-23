@@ -123,6 +123,7 @@ div.section_projects{
     height: 400px;
     transition: all 0.3s;
     margin-top: 8em;
+    /* display: inline;; */
  } 
  .swiper-slide {
     display: flex !important;
@@ -144,6 +145,18 @@ div.section_projects{
     transform: perspective(1000px);
     box-shadow: 10px 20px 40px rgba(0,0,0,0.25);
     margin: 30px;
+}
+.card-slider_item:not(:hover) {
+    transform: perspective(1000px); /* không hover, thẻ trở về vị trí cũ */
+    transition: 1s; /*trở về vị trí cũ một cách từ từ*/
+}
+.card-slider_item:nth-child(2):hover ~ .card-slider_item:nth-child(1) {
+    transform: translateX(-100px); /* Card đầu tiên di chuyển sang trái */
+    transition: all 0.5s ease;
+}
+
+.card-slider_item {
+    transition: transform 0.5s ease; /* Hiệu ứng chuyển động mượt */
 }
 .card-slider_item.swiper-slider-active .card-slider_img img{
     opacity: 1;
@@ -239,23 +252,20 @@ div.section_projects{
     height: 13px;
     display: block;
     border-radius:10px;
-    background: #f9578d;
-    opacity: 0.5;
+    background: #f0dd0b;
+    opacity: 0.7;
     transition: all 0.3s;
+    /* margin: 10px; */
 }
 .card-slider_pagination .swiper-pagination-bullet-active{
     opacity: 1;
-    background: rgb(241, 18, 207);
+    background: linear-gradient(rgb(194, 19, 130),rgb(253, 253, 4));
     height: 30px;
     box-shadow: var(--box-shadow);
     margin-left: 10em;
 } 
-.card-slider:not(:hover) {
-    transform: perspective(1000px); /* không hover, thẻ trở về vị trí cũ */
-    transition: 1s; /*trở về vị trí cũ một cách từ từ*/
-}
 .card-slider_item:hover .card-slider_img{
-    transform: rotateY(-180deg) !important;
+    transform: rotateY(-120deg) !important;
 }
 .card-slider_item .card-slider_img img {
     position: absolute;
