@@ -146,6 +146,11 @@ div.section_projects{
     box-shadow: 10px 20px 40px rgba(0,0,0,0.25);
     margin: 30px;
 }
+ .swiper-slide:not(.swiper-slide-active) .card-slider_item {
+    display: none; /* Ẩn tất cả các card không phải là card hiện tại */
+} 
+
+
 .card-slider_item:not(:hover) {
     transform: perspective(1000px); /* không hover, thẻ trở về vị trí cũ */
     transition: 1s; /*trở về vị trí cũ một cách từ từ*/
