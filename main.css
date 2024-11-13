@@ -4,8 +4,8 @@ body {
     overflow-x: hidden;
 }
 .body{
-    overflow-y: auto;
-    /* overflow-x: hidden; */
+    overflow-y: auto; 
+    overflow-x: hidden;
 }
 div.container-fluid{
     position: relative;
@@ -75,6 +75,8 @@ div.section_projects{
 #hinhtrungdoan{
     margin-top: 1em;
     margin-left: 8em;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+
 }
 /* chinh hieu ung load trang tu tu */
 @keyframes fadeIn {
@@ -86,24 +88,6 @@ div.section_projects{
     }
 }
 /*button click vao website*/
-#submit{
-    font-size: 16px;
-    background-color: transparent;
-    color: white;
-    border: 1px solid white;
-    cursor: pointer;
-    padding: 14px 40px;
-    width: fit-content;
-    border-radius: 12px;
-    font-weight: bold;
-    height: fit-content;
-    transition: all 0.3s ease;
-}
-#submit:hover
-{
-    background-color: transparent;
-    color: pink;
-}
 :root{
     --bg-color: linear-gradient(147deg,black,#642b73 74%);
     --box-shadow:0px 14px 80px rgba(252,56,203,0.227);
@@ -111,199 +95,42 @@ div.section_projects{
 *{
     box-sizing:border-box;
 }
- .card-slider{
-    width: 95%;
+ .container-card{
+    width: 90%;
     position: relative;
-    max-width: 800px;
+    max-width: 1200px;
     margin: auto; /* căn giữa theo chiều ngang */
     background: var(--bg-color);
     box-shadow: var(--box-shadow);
     padding: 25px; /*đặt khoảng cách bên trong card*/
     border-radius: 25px;
-    height: 400px;
+    height: 500px;
     transition: all 0.3s;
     margin-top: 8em;
     /* display: inline;; */
  } 
- .swiper-slide {
-    display: flex !important;
-    height: 100%;
-    margin-right: 15px; /* Khoảng cách giữa các card */
-}
-.card-slider_wrp {
-    display: flex;              /* Đặt flex cho các phần tử con (slide) */
-    width: 100%;                /* Chiều rộng của vùng wrapper là 100% */
-}
-.card-slider_item{
-    display: flex; /*sap xep cac phan tu con theo chieu ngang*/
-    align-items: center; /*can giua các phan tu con theo truc doc*/
-    position: relative;
-    width: 300px !important;
-    height: 400px !important;
-    background: #fff;
-    transform-style:preserve-3d;
-    transform: perspective(1000px);
-    box-shadow: 10px 20px 40px rgba(0,0,0,0.25);
-    margin: 30px;
-}
- .swiper-slide:not(.swiper-slide-active) .card-slider_item {
-    display: none; /* Ẩn tất cả các card không phải là card hiện tại */
-} 
-
-
-.card-slider_item:not(:hover) {
-    transform: perspective(1000px); /* không hover, thẻ trở về vị trí cũ */
-    transition: 1s; /*trở về vị trí cũ một cách từ từ*/
-}
-.card-slider_item:nth-child(2):hover ~ .card-slider_item:nth-child(1) {
-    transform: translateX(-100px); /* Card đầu tiên di chuyển sang trái */
-    transition: all 0.5s ease;
-}
-
-.card-slider_item {
-    transition: transform 0.5s ease; /* Hiệu ứng chuyển động mượt */
-}
-.card-slider_item.swiper-slider-active .card-slider_img img{
-    opacity: 1;
-    transition-delay: 0.3s;
-}
-.card-slider_item.swiper-slider-active .card-slider_content > *{
-    opacity: 1;
-    transform: none;
-}
-.card-slider_item .swiper-slider-active .card-slider_content > *:nth-child(1){
-    transition-delay: 0.3s;
-}
-.card-slider_item .swiper-slider-active .card-slider_content > *:nth-child(2){
-    transition-delay: 0.4s;
-}
-.card-slider_item .swiper-slider-active .card-slider_content > *:nth-child(3){
-    transition-delay: 0.5s;
-}
-.card-slider_item .swiper-slider-active .card-slider_content > *:nth-child(4){
-    transition-delay: 0.6s;
-}
-.card-slider_item .swiper-slider-active .card-slider_content > *:nth-child(5){
-    transition-delay: 0.7s;
-} 
-.card-slider_item .swiper-slider-active .card-slider_content > *:nth-child(6){
-    transition-delay: 0.8s;
-} 
-/* hiệu ứng cho hình ảnh */
-.card-slider_item .card-slider_img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover !important;
-    display: block;
-    opacity: 1;
-    position: absolute;
-    z-index: 1;
-    transform-origin: left;
-    transform-style: preserve-3d;
-    background:black;
-    transition:all  1.5s;
-}
-/* lấy tất cả nội dung trong phần content */
-.card-slider_content > *{
-    opacity: 0; /*ban đầu nội dung ko hiển thị*/
-    transform: translateY(25px); /*dịch chuyển xuống dưới 25px*/
-    transition: all 0.4s;
-}
-/* nội dung trong content */
-.swiper-slide-active .card-slider_content > * {
-    opacity: 1; 
-    transform: translateY(0); /* Trở về vị trí ban đầu */
-    transition-delay: 0.4s; /*Thêm chút trễ để nội dung hiện dần  */
-    margin-top: 1em;
-}
-/* nút go to my website */
-.card-slider_button{
-    /* display: inline-flex; */
-    background-image: var(--bg-color);
-    padding: 15px 35px;
-    border-radius: 50px;
-    color: white;
-    box-shadow: var(--box-shadow);
+ .card-slider_button
+ {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: rgb(205, 146, 205); /* Màu nền của button */
+    color: white; /* Màu chữ */
+    text-align: center;
     text-decoration: none;
-    font-weight: 600;
-    justify-content: center;
-    text-align: center;
-    letter-spacing: 1px;
-    font-size: medium;
-} 
- .card-slider .swiper-container-horizontal > .swiper-pagination-bullets,.card-slider .swiper-pagination-custom,.card-slider .swiper-pagination-fraction{
-    bottom: 10px;
-    left: 0;
-    width: 100%;
-} 
-/*phân trang của slider*/
- .card-slider_pagination{
-    position: absolute;
-    z-index: 21;
-    right: 20px;
-    width: 11px !important;
-    text-align: center;
-    left: auto !important;
-    top: 50% !important;
-    bottom: auto !important;
-    transform: translateY(-50%);
+    border-radius: 8px; /* Bo tròn góc */
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    color: #000;
 }
-.card-slider_pagination.swiper-pagination-bullets .swiper-pagination-bullet{
-    margin: 8px 0;
+.card-slider_button:hover {
+    background-color: #711492; /* Màu nền khi hover */
+    transform: scale(1.05); /* Hiệu ứng phóng to nhẹ */
+    color: #fff;
 }
-/* nut nho trong thanh keo */
-.card-slider_pagination .swiper-pagination-bullet{
-    width: 13px;
-    height: 13px;
-    display: block;
-    border-radius:10px;
-    background: #f0dd0b;
-    opacity: 0.7;
-    transition: all 0.3s;
-    /* margin: 10px; */
-}
-.card-slider_pagination .swiper-pagination-bullet-active{
-    opacity: 1;
-    background: linear-gradient(rgb(194, 19, 130),rgb(253, 253, 4));
-    height: 30px;
-    box-shadow: var(--box-shadow);
-    margin-left: 10em;
-} 
-.card-slider_item:hover .card-slider_img{
-    transform: rotateY(-120deg) !important;
-}
-.card-slider_item .card-slider_img img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover !important;
-    transform-style: preserve-3d;
-    transition: 1s;
-}
-.card-slider_content{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    color: black;
-    gap: 1em; /* Điều chỉnh khoảng cách giữa các phần tử */
-}
-.card-slider_title{
-    font-size: 24px;
-    font-weight: 700;
-}
-.card-slider_des{
-    margin-left: 1em;
-    text-align: justify;
-    hyphens: auto;
-    margin-right: 1em;
+.swiper-pagination-bullet {
+    background-color: #dcd50e !important; /* Màu vàng */
+    opacity: 1; /* Đảm bảo các chấm có độ đậm rõ ràng */
 }
 /* footer */
  .icon-area{
@@ -338,16 +165,7 @@ div.section_projects{
     transform: rotateY(360deg);
     color: #fff;
 }
-/* .icon-area .icon a::before{
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom,#d506ce,#a605b4);
-    left: 0;
-    top: 100%;
-    transition: 1.5s;
-} */
+
 .icon-area .icon:nth-child(1) a::before{
     content: '';
     position: absolute;
@@ -381,3 +199,96 @@ div.section_projects{
 .icon-area .icon a:hover::before{
     top:0;
 }  
+.maincontainer{
+    position: absolute;
+    background: none;
+    display: flex; /*sap xep cac phan tu con theo chieu ngang*/
+    align-items: center; /*can giua các phan tu con theo truc doc*/
+    position: relative;
+    width: 300px !important;
+    height: 400px !important;
+    transform-style:preserve-3d;
+    transform: perspective(1000px);
+    box-shadow: 10px 20px 40px rgba(0,0,0,0.25);
+    margin: 30px;
+  }
+  
+  /* THE CARD HOLDS THE FRONT AND BACK FACES */
+  .thecard{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease;
+  }
+  
+  /* THE PSUEDO CLASS CONTROLS THE FLIP ON MOUSEOVER AND MOUSEOUT */
+  .thecard:hover{
+    transform: rotateY(180deg);
+  }
+  
+  /* THE FRONT FACE OF THE CARD, WHICH SHOWS BY DEFAULT */
+   .thefront{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    overflow: hidden;
+    /* background: white; */
+    color: #000;
+  }
+
+  
+  /* THE BACK FACE OF THE CARD, WHICH SHOWS ON MOUSEOVER */
+  .theback{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    overflow: hidden;
+    background: #fafafa;
+    color: #333;
+    text-align: center;
+    transform: rotateY(180deg);
+    /* display: flex; */
+  }
+  
+  
+  /*This block (starts here) is merely styling for the flip card, and is NOT an essential part of the flip code */
+  .thefront h1, .theback h1{
+    font-family: 'zilla slab', sans-serif;
+    padding: 30px;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  .thefront p, .theback p{
+    font-family: 'zilla slab', sans-serif;
+    padding: 30px;
+    font-weight: normal;
+    font-size: 16px;
+    text-align: center;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #dcd50e !important;  
+  }
+  
+  .swiper-button-prev:hover,
+  .swiper-button-next:hover {
+    color: #ffce1e; 
+  }
+  .slider-wrapper{
+    /* transform: translateX(20px); */
+  }
+  

@@ -23,18 +23,13 @@
              </ul>
         </div>
     <div class = "col-8">
-      <!-- <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0" style="height: 3.5em;">
-          <li><a href="#about" class="nav-link px-2 active" style="color: white; margin-top: 8px;">ABOUT ME</a></li>
-          <li><a href="#projects" class="nav-link px-2" style="color: white; margin-top: 8px;">PROJECTS</a></li>
-          <li><a href="#contact" class="nav-link px-2" style="color: white; margin-top: 8px;">CONTACT</a></li>
-      </ul> -->
       <nav style="height: 4em;">
         <a href="#about" class="active" style="margin-top: 15px;">ABOUT ME</a>
         <a href="#projects" class="active" style="margin-top: 15px; ">PROJECTS</a>
         <a href="#contact" class="active" style="margin-top: 15px; ">CONTACT</a>
       </nav>
   </div>
-</div>
+  </div>
 </div>
 
 <!-- aboutme -->
@@ -44,212 +39,231 @@
             <img src="images/sun.gif" style="height: 60px; width: 90px;">
         </div>
         <div id="body">
-            <img class="rounded-circle me-1" width="250" height="250" src="images/tdoanbt.jpg" id="hinhtrungdoan">
+            <img class="rounded-circle me-1" width="280" height="280" src="images/tdoanbt.jpg" id="hinhtrungdoan">
         </div>
         <div class = "row">
             <div id="description">
             <p style="margin-left: 180px;font-size: 20px;font-family: Montserrat;"><i><b>Hi, trung doan day ne.<img src="images/sunflower.gif" style="height: 70px; width: 70px;"></b></i></p>
-            <p style="margin-left: 120px;font-size: 17px;font-family: Montserrat;"><i>Good things take time</i></p>
+            <p style="margin-left: 120px;font-size: 17px;font-family: Montserrat;"><i>The quicker you let go of old cheese, the sooner you find new cheese.</i></p>
             <br>
             </div>
         </div>
         <div class="row">
-            <img src="images/nghieng.png" style="margin-left: 74em; height: 60px; width: 90px;">
-        </div>
+            <img src="images/cloudy.png" style="transform: translate(800px,-500px); height: 70px; width: 90px;">
+            <img src="images/nghieng.png" style="transform: translate(1085px,-300px); height: 60px; width: 90px;">
+            <img src="images/clouds.png" style="transform: translate(100px,-300px); height: 60px; width: 90px;">
+            <img src="images/clouds.png" style="transform: translate(800px,-100px); height: 60px; width: 90px;">
+          </div>
         <div class="row">
-            <img src="images/1hoa.png" style="margin-left: 20em; height: 70px; width: 100px;">
+            <img src="images/1hoa.png" style="height: 70px; width: 100px; transform: translate(200px,-80px);">
         </div>
     </div>
 </div>
 <!-- projects -->
 <div id ="projects" class = "projects">
-<div class = "card-slider">
-  <div class = "card-slider_wrp swiper-wrapper">
-    <div class="swiper-slide">
-      <div class = "card-slider_item">
-        <div class = "card-slider_img">
-          <img src="images/01.png" alt="">
+    <div class="container-card swiper">
+        <div class="slider-wrapper">
+          <div class="card-list swiper-wrapper">
+            <!-- 1 -->
+            <div class="card-item swiper-slide">
+                <div class="maincontainer">
+                    <div class="thecard">
+                        <div class="thefront">
+                            <img src="images/01.png" style="width: 100%; height: 100%; object-fit: contain;">
+                        </div>
+                        <div class="theback"><h1>Ex 1: Email List </h1><p>This is the first exercise where I learned how to use Netbeans and Tomcat to create a web application.</p>
+                            <a href="https://emailist.azurewebsites.net/" class="card-slider_button" target="_blank">Explore my website.</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 2 -->
+            <div class="card-item swiper-slide">
+                <div class="maincontainer">
+                    <div class="thecard">
+                      <div class="thefront">
+                        <img src="images/survey2.png" style="width: 100%; height: 100%; object-fit: cover;">
+                      </div>
+                      <div class="theback"><h1>Ex2. Survey</h1><p>In this exercise I create a web application which is a survey. In this lesson I learn about HTML, CSS and understand how the User class works.
+                    </p>
+                    <a href="https://baitap.azurewebsites.net/" class="card-slider_button" target="_blank">Explore my website.</a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 3 -->
+            <div class="card-item swiper-slide">
+                <div class="maincontainer">
+                    <div class="thecard">
+                        <div class="thefront">
+                            <img src="images/01.png" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="theback"><h1>Ex3. 5.1</h1><p>In this exercise, you will modify a servlet in an email application to handle HTTP requests. I learned more about how the POST/GET methods work.</p>
+                            <a href="https://baitap51.azurewebsites.net/" class="card-slider_button" target="_blank">Explore my website.</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 4 -->
+            <div class="card-item swiper-slide">
+                <div class="maincontainer">
+                    <div class="thecard">
+                      <div class="thefront">
+                        <img src="images/52.png" style="width: 100%; height: 100%; object-fit: cover;">
+                      </div>
+                          <div class="theback"><h1>Ex4. 5.2</h1><p>In this exercise, I will create a new servlet - TestServlet mapped to the URL /test and see how the GET method works. Finally, learn how to use the @WebServlet annotation instead of mapping through the web.xml file.</p>
+                            <a href="https://bt52rd.onrender.com/" class="card-slider_button" target="_blank">Explore my website.</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 5 -->
+            <div class="card-item swiper-slide">
+                <div class="maincontainer">
+
+                    <div class="thecard">
+              
+                      <div class="thefront">
+                        <img src="images/61.png" style="width: 100%; height: 100%; object-fit: cover;">
+                      </div>
+              
+                      <div class="theback"><h1>Ex5. 6.1</h1><p>In this exercise I learn how to use JSP tags to display copyright notices and use files like footer.jsp and header.html to avoid code duplication at compile-time and runtime.            </div>
+                      </p>
+                      <a href="https://bt61.azurewebsites.net/" class="card-slider_button" target="_blank">Explore my website.</a>
+                        </div>
+              
+                    </div>
+                </div>
+            <!-- 6 -->
+            <div class="card-item swiper-slide">
+                <div class="maincontainer">
+
+                    <div class="thecard">
+              
+                      <div class="thefront">
+                        <img src="images/survey2.png" style="width: 100%; height: 100%; object-fit: cover;">
+                      </div>
+              
+                      <div class="theback"><h1>Ex6. 6.2</h1><p>In this exercise I learn how to create a new JSP and edit that JSP file with JSTL tags.
+                    </p>
+                    <a href="https://bt62.azurewebsites.net" class="card-slider_button" target="_blank">Explore my website.</a>
+                    </div>
+              
+                    </div>
+                </div>
+            </div>
+            <!-- 7 -->
+            <div class="card-item swiper-slide">
+                <div class="maincontainer">
+
+                    <div class="thecard">
+              
+                      <div class="thefront">
+                        <img src="images/btch8.1.png" style="width: 100%; height: 100%; object-fit: cover;">
+                      </div>
+              
+                      <div class="theback"><h1>Ex 8: truy vết 2 người vào gần nhất</h1><p>In this exercise, I learned about session and how to use it to create shopping cart in Servlet.
+                    </p>
+                    <a href="https://btapchuong81.azurewebsites.net/" class="card-slider_button" target="_blank">Explore my website.</a>
+                    </div>
+              
+                    </div>
+                </div>
+            </div>
+            <!-- 8 -->
+            <div class="card-item swiper-slide">
+                <div class="maincontainer">
+
+                    <div class="thecard">
+              
+                      <div class="thefront">
+                        <img src="images/bai8.png" style="width: 100%; height: 100%; object-fit: cover;">
+                      </div>
+              
+                      <div class="theback"><h1>Ex 8: 9.1 - Product</h1><p>Your use of this site is subject to the terms and conditions governing this and all transactions.</p>
+                        <a href="https://bt9cookie.azurewebsites.net/" class="card-slider_button" target="_blank">Explore my website.</a>
+
+                    </div>
+              
+                    </div>
+                </div>
+            </div>
+            <!-- 9 -->
+            <div class="card-item swiper-slide">
+                <div class="maincontainer">
+                    <div class="thecard">
+                      <div class="thefront">
+                        <img src="images/emailjava.png" style="width: 100%; height: 100%; object-fit: cover;">
+                      </div>
+              
+                      <div class="theback"><h1>Ex 9: Cart</h1><p>Your use of this site is subject to the terms and conditions governing this and all transactions.</p>
+                        <a href="https://btw6cartlan1.azurewebsites.net/" class="card-slider_button" target="_blank">Explore my website.</a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 10 -->
+            <div class="card-item swiper-slide">
+                <div class="maincontainer">
+                    <div class="thecard">
+                        <div class="thefront">
+                            <img src="images/sql.png" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="theback"><h1>Ex 10: SQL GateWay</h1><p>Your use of this site is subject to the terms and conditions governing this and all transactions.</p>
+                            <a href="https://btsqlgw.azurewebsites.net/servlet" class="card-slider_button" target="_blank">Explore my website.</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 11 -->
+            <div class="card-item swiper-slide">
+                <div class="maincontainer">
+                    <div class="thecard">
+                      <div class="thefront">
+                        <img src="images/connectionpool.png" style="width: 100%; height: 100%; object-fit: cover;">
+                      </div>
+                      <div class="theback"><h1>Ex 11: Connection Pool</h1><p>Your use of this site is subject to the terms and conditions governing this and all transactions.</p>
+                        <a href="https://connectionpool.azurewebsites.net/" class="card-slider_button" target="_blank">Explore my website.</a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 12 -->
+            <div class="card-item swiper-slide">
+                <div class="maincontainer">
+                    <div class="thecard">          
+                      <div class="thefront">
+                        <img src="images/connectionpool.png" style="width: 100%; height: 100%; object-fit: cover;">
+                      </div>
+                      <div class="theback"><h1>Ex 12: JPA-Hibernate</h1><p>Your use of this site is subject to the terms and conditions governing this and all transactions.</p>
+                        <a href="https://bttuan9-d5bcggazgkf7eshc.westus-01.azurewebsites.net/" class="card-slider_button" target="_blank">Explore my website.</a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 13 -->
+            <div class="card-item swiper-slide">
+                <div class="maincontainer">
+                    <div class="thecard">
+                        <div class="thefront">
+                            <img src="images/emailjava.png" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="theback"><h1>Ex 13: Java Mail</h1><p>In this section, I learned how to send mail using SMTP method in java.</p>
+                            <a href="https://webjavamail.azurewebsites.net/" class="card-slider_button" target="_blank">Explore my website.</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class = "card-slider_content">
-          <div class = "card-slider_title">
-              Ex1. Email List
-          </div>
-          <div class="card-slider_des">
-            This is the first exercise where I learned how to use Netbeans and Tomcat to create a web application.
-          </div>
-          <div>
-            <a href="https://emailist.azurewebsites.net/" class="card-slider_button" target="_blank">Explore my website.</a>
-          </div>
-        </div>
-      </div>
-          <!-- hết 1 card -->
-      <div class = "card-slider_item">
-        <div class = "card-slider_img">
-          <img src="images/survey2.png" alt="">
-        </div>
-        <div class = "card-slider_content">
-          <div class = "card-slider_title">
-              Ex2. Survey
-          </div>
-          <div class="card-slider_des">
-            In this exercise I create a web application which is a survey. In this lesson I learn about HTML, CSS and understand how the User class works.
-          </div>
-          <div>
-            <a href="https://baitap.azurewebsites.net/" class="card-slider_button" target="_blank">Explore my website.</a>
-          </div>
-        </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-slide-button swiper-button-prev"></div>
+          <div class="swiper-slide-button swiper-button-next"></div>
       </div>
     </div>
-        <div class="swiper-slide">
-          <!-- card 3 -->
-          <div class = "card-slider_item ">
-            <div class = "card-slider_img">
-              <img src="images/01.png" alt="">
-            </div>
-            <div class = "card-slider_content">
-              <div class = "card-slider_title">
-                  Ex3. 5.1
-              </div>
-              <div class="card-slider_des">
-                In this exercise, you will modify a servlet in an email application to handle HTTP requests. I learned more about how the POST/GET methods work.
-              </div>
-              <div>
-                <a href="https://baitap51.azurewebsites.net/" class="card-slider_button" target="_blank">Explore my website.</a>
-              </div>
-            </div>
-          </div>
-          <div class = "card-slider_item ">
-            <div class = "card-slider_img">
-              <img src="images/52.png" alt="">
-            </div>
-            <div class = "card-slider_content">
-              <div class = "card-slider_title">
-                  Ex4. 5.2
-              </div>
-              <div class="card-slider_des">
-                In this exercise, I will create a new servlet - TestServlet mapped to the URL /test and see how the GET method works. Finally, learn how to use the @WebServlet annotation instead of mapping through the web.xml file.
-              </div>
-              <div>
-                <a href="https://bt52rd.onrender.com/" class="card-slider_button" target="_blank">Explore my website.</a>
-              </div>
-            </div>
-            </div>
-          </div>
-      <div class="swiper-slide">
-        <div class = "card-slider_item">
-          <div class = "card-slider_img">
-            <img src="images/61.png" alt="">
-          </div>
-          <div class = "card-slider_content">
-            <div class = "card-slider_title">
-                Ex5. 6.1
-            </div>
-            <div class="card-slider_des">
-              In this exercise I learn how to use JSP tags to display copyright notices and use files like footer.jsp and header.html to avoid code duplication at compile-time and runtime.            </div>
-            <div>
-              <a href="https://bt61.azurewebsites.net/" class="card-slider_button" target="_blank">Explore my website.</a>
-            </div>
-          </div>
-        </div>
-        <div class = "card-slider_item">
-          <div class = "card-slider_img">
-            <img src="images/survey2.png" alt="">
-          </div>
-          <div class = "card-slider_content">
-            <div class = "card-slider_title">
-              Ex6. 6.2
-            </div>
-            <div class="card-slider_des">
-              In this exercise I learn how to create a new JSP and edit that JSP file with JSTL tags.
-            </div>
-            <div>
-              <a href="https://bt62.azurewebsites.net" class="card-slider_button" target="_blank">Explore my website.</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <!-- card 3 -->
-        <div class = "card-slider_item ">
-          <div class = "card-slider_img">
-            <img src="images/cartw6.png" alt="">
-          </div>
-          <div class = "card-slider_content">
-            <div class = "card-slider_title">
-                Ex7. Cart
-            </div>
-            <div class="card-slider_des">
-              In this exercise, I learned about session and how to use it to create shopping cart in Servlet.
-            </div>
-            <div>
-              <a href="https://btw6cartlan1.azurewebsites.net/" class="card-slider_button" target="_blank">Explore my website.</a>
-            </div>
-          </div>
-        </div>
-        <!--  -->
-        <div class = "card-slider_item ">
-          <div class = "card-slider_img">
-            <img src="images/jpa.png" alt="">
-          </div>
-          <div class = "card-slider_content">
-            <div class = "card-slider_title">
-                Ex8. JPA - Hibernate
-            </div>
-            <div class="card-slider_des">
-              In this exercise I learned how to use JPA - Hibernate
-            </div>
-            <div>
-              <a href="https://bttuan9-d5bcggazgkf7eshc.westus-01.azurewebsites.net/" class="card-slider_button" target="_blank">Explore my website.</a>
-            </div>
-          </div>
-        </div>
-    </div>
-    <div class="swiper-slide">
-      <!-- card 3 -->
-      <div class = "card-slider_item ">
-        <div class = "card-slider_img">
-          <img src="images/emailjava.png" alt="">
-        </div>
-        <div class = "card-slider_content">
-          <div class = "card-slider_title">
-              Ex9. Send a mail
-          </div>
-          <div class="card-slider_des">
-            In this section, I learned how to send mail using SMTP method in java.
-          </div>
-          <div>
-            <a href="https://webjavamail.azurewebsites.net/" class="card-slider_button" target="_blank">Explore my website.</a>
-          </div>
-        </div>
-      </div>
-      <!--  -->
-      <div class = "card-slider_item ">
-        <div class = "card-slider_img" style="background-color: white;">
-          <img src="images/flower.png" alt="" style="height: 150px; width: 150px; top: 30%; left: 26%;">
-        </div>
-        <div class = "card-slider_content">
-          <!-- <div class = "card-slider_title">
-              .
-          </div> -->
-          <div class="card-slider_title">
-            To be continued....
-          </div>
-          <!-- <div>
-            <a href="" class="card-slider_button" target="_blank">Explore my website.</a>
-          </div> -->
-        </div>
-      </div>
-  </div>
-    <div class = "card-slider_pagination"></div>
-</div>
 </div>
 <!-- footer -->
   <footer id="contact" class="py-3 my-4">
     <ul class="nav justify-content-center border-bottom pb-3 mb-3"> 
-      <!-- <li><a href="https://www.instagram.com/trung_doan876/" target="_blank"><img src="images/instagram.png" style="height: 40px;width: 40px; margin: 0 10px;""></a></li>
-      <li><a href="https://www.facebook.com/profile.php?id=100008782630416" target="_blank"><img src="images/facebook.png" style="height: 40px;width: 40px;margin: 0 10px;""></a></li>
-      <li><a href="https://github.com/trungdoan876" target="_blank"><img src="images/social.png" style="height: 40px;width: 40px;margin: 0 10px;""></a></li> -->
-      
       <div class = "icon-area">
       <div class = "icon">
         <a href="https://www.facebook.com/profile.php?id=100008782630416" target="_blank">
@@ -267,24 +281,38 @@
         </a>
       </div>
     </div>
-  </ul>
+    </ul>
     <p class="text-center text-body-secondary">© 2024 trung_doan876</p>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
-<script>  
-   var swipern = new Swiper(".card-slider",{
-     spaceBetween:30,
-     effect:'fade',
-     loop: true,
-     mousewheel:{
-     invert:false,
-     },
-     pagination:{
-       el:'.card-slider_pagination',
-       clickable:true,
-     }
-  });
-</script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+            
+    <script>
+        const swiper = new Swiper('.slider-wrapper', {
+        slidesPerView: 3,
+        slidesPerGroup: 3, 
+        loop: true,             
+        grabCursor: true,       
+        centerSlide: 'true',
+        fade: 'true',
+        // autoplay: {
+        //             delay: 3000,  
+        //             disableOnInteraction: false,  
+        //         },
+        // Pagination bullets
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            dynamicBullets: true, 
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        });
+
+    </script>
 
 </html>
